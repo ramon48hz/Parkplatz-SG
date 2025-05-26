@@ -77,25 +77,38 @@ body {
   color: white;
 }
 
+.button-container button.active {
+  background-color: #0261B4;
+  color: white;
+}
+
 .info-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 .bubble {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 180px;
+  height: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
   text-align: center;
+  color: white;
+  padding: 20px;
   line-height: 1.3;
+}
+
+.bubbles-row {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .bubble.blue {
@@ -106,13 +119,20 @@ body {
   background-color: #28a745;
 }
 
+.bubble.yellow {
+  background-color: #ffc107;
+}
+
+.bubble.red {
+  background-color: #dc3545;
+}
+
 iframe#karte {
-  width: 300px;
-  height: 200px;
+  width: 320px;
+  height: 220px;
   border: none;
   border-radius: 12px;
 }
-
 
 
 
