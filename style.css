@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
   background-image: url(AdobeStock_419072996.jpeg);
   background-size: cover;
   background-position: center;
@@ -14,20 +14,22 @@ body {
 }
 
 .banner {
-  width: 100%;
+  width: 100vw;
   height: 152px;
   background: rgba(2, 97, 180, 0.80);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
+  padding: 0 60px;
   box-sizing: border-box;
+  margin: 0;
 }
 
 .banner-text {
   font-size: 32px;
   font-weight: bold;
   color: white;
+  white-space: nowrap;
 }
 
 .logo {
@@ -157,19 +159,21 @@ iframe#karte {
 }
 
 @media (max-width: 600px) {
-    .banner {
-    flex-direction: column;
-    height: auto;
+  .banner {
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
+    height: auto;
   }
 
   .banner-text {
     font-size: 20px;
+    text-align: center;
   }
 
   .logo {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
   }
 
   .info-box {
