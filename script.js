@@ -20,14 +20,48 @@ async function zeigeParkhaus(name) {
     return;
   }
 
-  document.getElementById("freiePlaetze").innerText = `${parkhaus.shortfree}\nfreie Plätze`;
-
+  const infoBox = document.getElementById("parkhaus-info");
+  const freiePlaetzeEl = document.getElementById("freiePlaetze");
   const auslastungEl = document.getElementById("auslastung");
+
+  if (parkhaus.phstate === "nicht verfügbar") {
+    freiePlaetzeEl.style.display = "none";
+    auslastungEl.style.display = "none";
+
+    let geschlossenMsg = document.getElementById("geschlossen-msg");
+    if (!geschlossenMsg) {
+      geschlossenMsg = document.createElement("div");
+      geschlossenMsg.id = "geschlossen-msg";
+      geschlossenMsg.innerText = "Parkhaus geschlossen";
+      geschlossenMsg.style.color = "#dc3545";
+      geschlossenMsg.style.fontSize = "24px";
+      geschlossenMsg.style.fontWeight = "bold";
+      geschlossenMsg.style.marginTop = "20px";
+      geschlossenMsg.style.textAlign = "center";
+      infoBox.appendChild(geschlossenMsg);
+    } else {
+      geschlossenMsg.style.display = "block";
+    }
+
+    document.getElementById("karte").src = "";
+    return;
+  }
+
+  document.getElementById("karte").src =
+    `https://maps.google.com/maps?q=${parkhaus.standort.lat},${parkhaus.standort.lon}&z=15&output=embed`;
+
+  const geschlossenMsg = document.getElementById("geschlossen-msg");
+  if (geschlossenMsg) geschlossenMsg.style.display = "none";
+
+  freiePlaetzeEl.style.display = "flex";
+  auslastungEl.style.display = "flex";
+
+  freiePlaetzeEl.innerText = `${parkhaus.shortfree}\nfreie Plätze`;
+  freiePlaetzeEl.className = "bubble blue";
+
   const belegung = parkhaus.belegung_prozent;
-
   auslastungEl.innerText = `${belegung ?? "--"}%\nAuslastung`;
-
-  auslastungEl.classList.remove("green", "yellow", "red", "blue");
+  auslastungEl.className = "bubble";
 
   if (belegung == null) {
     auslastungEl.classList.add("blue");
@@ -38,9 +72,6 @@ async function zeigeParkhaus(name) {
   } else {
     auslastungEl.classList.add("red");
   }
-
-  document.getElementById("karte").src =
-    `https://maps.google.com/maps?q=${parkhaus.standort.lat},${parkhaus.standort.lon}&z=15&output=embed`;
 }
 
 ladeParkdaten().then((daten) => {
@@ -52,11 +83,16 @@ ladeParkdaten().then((daten) => {
     button.innerText = ph.phname;
 
     button.onclick = () => {
-      const alleButtons = container.querySelectorAll("button");
-      alleButtons.forEach(btn => btn.classList.remove("active"));
+      document.querySelectorAll("#button-container button").forEach(btn =>
+        btn.classList.remove("active")
+      );
       button.classList.add("active");
-      
+
       zeigeParkhaus(ph.phname);
+
+      document.getElementById("parkhaus-info").scrollIntoView({
+        behavior: "smooth"
+      });
     };
 
     container.appendChild(button);

@@ -8,28 +8,30 @@
 </head>
 <body>
 
-<nav>
-  <div class="banner">
-    <span class="banner-text left">SLOTIFY</span>
-    <img src="Logo.svg" alt="Logo" class="logo" />
-    <span class="banner-text right">FREIE PARKPLÄTZE IN ST. GALLEN</span>
-  </div>
-</nav>
+  <nav>
+    <div class="banner">
+      <span class="banner-text left">SLOTIFY</span>
+      <img src="Logo.svg" alt="Logo" class="logo" />
+      <span class="banner-text right">FREIE PARKPLÄTZE IN ST. GALLEN</span>
+    </div>
+  </nav>
 
   <div class="backbox">
     <h1 class="textblue">Wähle dein Parkhaus</h1>
 
-
     <div id="button-container" class="button-container"></div>
 
-    <div id="parkhaus-info" class="info-box">
-      <div id="freiePlaetze" class="bubble blue">-- freie Plätze</div>
-      <div id="auslastung" class="bubble blue">-- Auslastung</div>
-    </div>
 
-    <iframe id="karte" src="" allowfullscreen="" loading="lazy"></iframe>
+  <div id="parkhaus-info" class="info-box">
+   <div class="bubbles-row">
+     <div id="freiePlaetze" class="bubble blue">-- freie Plätze</div>
+    <div id="auslastung" class="bubble blue">-- Auslastung</div>
+    </div>
   </div>
-  <p>Ramon Künzle & Indira Hagmann 24C1 </p>
+<iframe id="karte" src="" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
+  <p>Ramon Künzle & Indira Hagmann 24C1</p>
 
   <script src="script.js"></script>
 </body>
