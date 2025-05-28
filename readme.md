@@ -12,7 +12,7 @@ Indira Hagmann 24C1 (indira.hagmann@stud.fhgr.ch)
 
 ## Learnings & Schwierigkeiten
 Ramon: 
-
+Durch die Gestaltung der Webseite habe ich gelernt, wie man die dargestellten Informationen übersichtlich und responsiv präsentiert. Eine besondere Herausforderung bestand darin, das in Figma entworfene Webdesign mithilfe von HTML und CSS entsprechend umzusetzen und die Elemente identisch darzustellen.
 
 Indira: Ich konnte meine Kenntnisse in JavaScript und CSS-Grid vertiefen. Eine Herausforderung war es, den Fehler zu finden, warum zwei Parkhäuser keine Daten liefern, nach längerem Analysieren stellte sich heraus, dass diese nicht mehr betrieben werden.
 
