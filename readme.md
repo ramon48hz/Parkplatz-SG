@@ -1,0 +1,29 @@
+# Parking SG – Slotify
+
+## Kurzbeschreibung des Projekts
+Slotify zeigt in Echtzeit die freien Parkplätze in den Parkhäusern von St. Gallen an. Die Daten werden automatisch über eine öffentliche API geladen und visuell aufbereitet, inklusive Auslastung, Karte und Farbcodierung.
+
+## Gruppenname
+Parking SG
+
+## Gruppenmitglieder
+Ramon Künzle 24C1 (ramon.kuenzle@stud.fhgr.ch)
+Indira Hagmann 24C1 (indira.hagmann@stud.fhgr.ch)
+
+## Learnings & Schwierigkeiten
+Ramon: 
+
+
+Indira: Ich konnte meine Kenntnisse in JavaScript und CSS-Grid vertiefen. Eine Herausforderung war es, den Fehler zu finden, warum zwei Parkhäuser keine Daten liefern, nach längerem Analysieren stellte sich heraus, dass diese nicht mehr betrieben werden.
+
+## Verwendete Ressourcen & Prompts
+- API: (https://daten.stadt.sg.ch/api/explore/v2.1/catalog/datasets/freie-parkplatze-in-der-stadt-stgallen-pls/records?limit=20)  
+- Prompting & Hilfe: ChatGPT zur Fehlersuche, Strukturverbesserung und Verständnis von API-Verhalten
+- Styling: (https://fonts.google.com)
+
+## Links
+- Figma-Design (https://www.figma.com/design/BtEK61fHzYJwJqdYuO29Vb/Slotify?node-id=0-1&t=MYaKESzPiQDXO9dI-1)
+- GitHub Repository (https://github.com/ramon48hz/Parkplatz-SG)
+
+## Weitere Verwendung
+Projekt nur für das Modul Interaktive Medien II, keine weitere Verwendung geplant.
